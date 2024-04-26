@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Overpass", sans-serif;
+    margin: 0;
+}
+
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --Gray-Background: hsl(214, 23%, 14%);
+}
+
+body {
+    background-color: var(--Very-Dark-Blue);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Styling of the first page -- Start */
+
+.container-one {
+    background-color: var(--Gray-Background);
+    margin: auto;
+    padding: 30px;
+    width: 22%;
+    border-radius: 25px;
+}
+
+.container-one .image-star {
+    background-color: var(--Dark-Blue);
+    border-radius: 50%;
+    width: fit-content;
+    padding: 15px;
+    margin-bottom: 40px;    
+}
+
+.container-one h1    {
+    color: var(--White);
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.container-one p {
+    color: var(--Light-Grey);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.container-one .ratingButtons {
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container-one .ratingButtons > button {
+    border: none;
+    border-radius: 50%;
+    width: fit-content;
+    padding: 20px;
+    background-color: var(--Dark-Blue);
+    color: var(--Light-Grey);
+    font-weight: 400;
+}
+
+.container-one .ratingButtons .one {
+    margin: auto auto auto 0;
+}
+
+.container-one .ratingButtons .two, .three, .four {
+    margin: auto;
+}
+
+.container-one .ratingButtons .five {
+    margin: auto 0 auto auto;
+}
+
+.container-one .ratingButtons > button:hover {
+    background-color: var(--Medium-Grey);
+    color: var(--White);
+    cursor: pointer;
+}
+
+.container-one .ratingButtons > button:active {
+    background-color: var(--Orange);
+    color: var(--White);
+}
+
+.container-one > button {
+    width: 100%;
+    background-color: var(--Orange);
+    border: none;
+    color: var(--White);
+    border-radius: 25px;
+    padding: 15px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.container-one > button:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+    cursor: pointer;
+}
+
+/* Styling of the first page -- end */
+
+/* Styling of the second page -- start */
+
+.container-two {
+    background-color: var(--Gray-Background);
+    margin: auto;
+    padding: 40px 27px;
+    width: 22%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container-two .image-thanks {
+    margin: auto;
+}
+
+.container-two .ratingResults {
+    display: flex;
+    justify-content: center;
+    background-color: var(--Dark-Blue);
+    width: 60%;
+    margin: 25px auto;
+    padding: 7px;
+    border-radius: 25px;
+    color: var(--Orange);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.container-two > h1 {
+    color: var(--White);
+    font-weight: 700;
+    margin: 10px;
+}
+
+.container-two > p {
+    color: var(--Light-Grey);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+/* Styling of the second page -- end */
+
+/* Respsonive layout - first & second containers */
+@media (max-width: 600px){
+    .container-one, .container-two {
+        width: 80%;
+    }
+}
